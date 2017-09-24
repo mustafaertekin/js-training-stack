@@ -6,6 +6,7 @@
 
 describe('Test Suite - Stack', () => {
     
+    // initialize the data structure
     let rechnungStack = new Array();
         rechnungStack.add("Geschenk");
         rechnungStack.add("Neue Tasche");
@@ -26,42 +27,50 @@ describe('Test Suite - Stack', () => {
     it('should remove the last two items', function(){
         rechnungStack.remove();  
         rechnungStack.remove();  
-
-        rechnungStack.peek().should.be.equal('Steuer');
-        rechnungStack.size().should.be.equal(4);
+        let topOfStack = rechnungStack.peek()
+        let size = rechnungStack.size(); 
+        
+        topOfStack.should.be.equal('Steuer');
+        size.should.be.equal(4);
     });
     
     it('should answer the question that the stack is emtpy!', function(){
         let isEmpty = rechnungStack.isEmpty();
+        let size = rechnungStack.size(); 
         
         isEmpty.should.be.equal(false);
-        rechnungStack.size().should.be.equal(4);
+        size.should.be.equal(4);
     });
     
     it('should reset stack', function(){
         rechnungStack.reset();
         let isEmpty = rechnungStack.isEmpty();
+        let size = rechnungStack.size(); 
 
         isEmpty.should.be.equal(true);
-        rechnungStack.size().should.be.equal(0);
+        size.should.be.equal(0);
     });
     
     it('should create an instance from an array', function(){
         rechnungStack.$stackOf(["Fleisch", "Strassenverkehrsamt"]);
         let isEmpty = rechnungStack.isEmpty();
+        let topOfStack = rechnungStack.peek()
+        let size = rechnungStack.size(); 
 
         isEmpty.should.be.equal(false);
-        rechnungStack.size().should.be.equal(2);
-        rechnungStack.peek().should.be.equal("Strassenverkehrsamt");
+        size.should.be.equal(2);
+        topOfStack.should.be.equal("Strassenverkehrsamt");
     });
     
     it('should create an instance from given parameters', function(){
         rechnungStack.$stackOf("Freiwillige Zuwendung", "Spielgruppe");
         let isEmpty = rechnungStack.isEmpty();
+        let topOfStack = rechnungStack.peek()
+        let size = rechnungStack.size(); 
 
         isEmpty.should.be.equal(false);
-        rechnungStack.size().should.be.equal(4);
-        rechnungStack.peek().should.be.equal("Spielgruppe");
+        size.should.be.equal(4);
+        topOfStack.should.be.equal("Spielgruppe");
     });
 });
 
