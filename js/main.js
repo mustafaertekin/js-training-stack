@@ -6,16 +6,22 @@
 "use strict";
 
 
-let stack = new Array();
+let rechnungStack = new Array();
 
-stack.add(5);
-stack.add(4);
-stack.add(-2);
-stack.add(11);
+rechnungStack.add("Geschenk");
+rechnungStack.add("Neue Tasche");
+rechnungStack.add("Strom");
+rechnungStack.add("Steuer");
+rechnungStack.add("Krankenkasse");
+rechnungStack.add("Miete");
 
-stack.peek(); // 11
+rechnungStack.peek(); // "Miete"
+rechnungStack.size(); // 6
 
-stack.remove();  // 11
-stack.remove();  // -2
+rechnungStack.remove();  // "Miete"
+rechnungStack.remove();  // "Krankenkasse"
 
-stack.isEmpty(); // false
+rechnungStack.isEmpty(); // false
+
+rechnungStack.empty(); 
+rechnungStack.isEmpty(); // true
