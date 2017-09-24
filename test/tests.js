@@ -39,10 +39,29 @@ describe('Test Suite - Stack', () => {
     });
     
     it('should reset stack', function(){
-        let isEmpty = rechnungStack.reset();
+        rechnungStack.reset();
+        let isEmpty = rechnungStack.isEmpty();
+
+        isEmpty.should.be.equal(true);
+        rechnungStack.size().should.be.equal(0);
+    });
+    
+    it('should create an instance from an array', function(){
+        rechnungStack.$stackOf(["Fleisch", "Strassenverkehrsamt"]);
+        let isEmpty = rechnungStack.isEmpty();
 
         isEmpty.should.be.equal(false);
-        rechnungStack.size().should.be.equal(4);
+        rechnungStack.size().should.be.equal(2);
+        rechnungStack.peek().should.be.equal("Strassenverkehrsamt");
+    });
+    
+    it('should create an instance from given parameters', function(){
+        rechnungStack.$stackOf(["Fleisch", "Strassenverkehrsamt"]);
+        let isEmpty = rechnungStack.isEmpty();
+
+        isEmpty.should.be.equal(false);
+        rechnungStack.size().should.be.equal(2);
+        rechnungStack.peek().should.be.equal("Strassenverkehrsamt");
     });
 });
 
