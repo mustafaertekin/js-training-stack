@@ -56,12 +56,12 @@ describe('Test Suite - Stack', () => {
     });
     
     it('should create an instance from given parameters', function(){
-        rechnungStack.$stackOf(["Fleisch", "Strassenverkehrsamt"]);
+        rechnungStack.$stackOf("Freiwillige Zuwendung", "Spielgruppe");
         let isEmpty = rechnungStack.isEmpty();
 
         isEmpty.should.be.equal(false);
-        rechnungStack.size().should.be.equal(2);
-        rechnungStack.peek().should.be.equal("Strassenverkehrsamt");
+        rechnungStack.size().should.be.equal(4);
+        rechnungStack.peek().should.be.equal("Spielgruppe");
     });
 });
 
