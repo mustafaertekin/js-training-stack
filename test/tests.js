@@ -23,11 +23,19 @@ describe('Test Suite - Stack', () => {
         size.should.be.equal(6);
     });
       
-    it('An url will be parsed an return all the parts in an object.', function(){
-        rechnungStack.remove();  // "Miete"
-        rechnungStack.remove();  // "Krankenkasse"
+    it('should remove the last two items', function(){
+        rechnungStack.remove();  
+        rechnungStack.remove();  
 
-        analysis.query.should.be.equal('sort=ASC');
+        rechnungStack.peek().should.be.equal('Steuer');
+        rechnungStack.size().should.be.equal(4);
+    });
+    
+    it('should answer the question that the stack is emtpy!', function(){
+        let isEmpty = rechnungStack.isEmpty();
+        
+        isEmpty.should.be.equal(false);
+        rechnungStack.size().should.be.equal(4);
     });
 });
 
