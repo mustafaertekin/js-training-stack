@@ -3,30 +3,17 @@
  * You find the program logic, data structures and function calls in this file 
  */
 
-"use strict";
 
-// Every function has its method
-(() => {
-    var urlObject = analyseUrl('https://www.google.ch/search?q=url');
-    console.log("HOST:", urlObject.host)
-    console.log("PATH:", urlObject.path)
-    console.log("QUERY:", urlObject.query)
-})();
+let stack = new Array();
 
+stack.add(5);
+stack.add(4);
+stack.add(-2);
+stack.add(11);
 
-(function() {
-    let palindroms = findPalindroms("merhaba dostlar ses verin de karpuz kesek");
-    console.log(palindroms);
-})();
+stack.ಠ_ಠ(); // 11
 
+stack.remove();  // 11
+stack.remove();  // -2
 
-(function(){
-    let gcd = findGcd(9, 27);
-    console.log(9);
-})();
-
-
-(() => {
-    let gcd = findGcd(9, 27);
-    console.log(9);
-})();
+stack.isEmpty(); // false
