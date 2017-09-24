@@ -37,5 +37,12 @@ describe('Test Suite - Stack', () => {
         isEmpty.should.be.equal(false);
         rechnungStack.size().should.be.equal(4);
     });
+    
+    it('should reset stack', function(){
+        let isEmpty = rechnungStack.reset();
+
+        isEmpty.should.be.equal(false);
+        rechnungStack.size().should.be.equal(4);
+    });
 });
 

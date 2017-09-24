@@ -1,54 +1,42 @@
 
 
-// the new sexy way
-function findPalindroms(pSentence){
-    return pSentence.replace(/\W/g, " ")
-                    .toLowerCase()
-                    .split(" ")
-                    .filter(word => word == word.split("").reverse().join("") && word.length>1);
-}
+/**
+ * Add new item into the stack
+ * @param  pItem, item to be added
+ */
+Array.prototype.add = function(pItem){};
+
+/**
+ * Remove the top of the stack from the stack
+ */
+Array.prototype.remove = function(){}
+
+/**
+ * Shos the item inthe top of the stack
+ */
+Array.prototype.peek = function(){}
+
+/**
+ * Delelte all items from the stack
+ */
+Array.prototype.reset = function(){}
+
+/**
+ * Ask for the emptyness
+ */
+Array.prototype.isEmpty = function(){}
 
 
-// old way
-function alternative(pSentence){
-    let sentence = pSentence.replace(/\W/g, " ").toLowerCase();
-    let words = sentence.split("");
-    let result = [];
-    
-    for(let i=0; i<words.length; i++){
-        if(words[i] == words[i].split("").reverse().join("") && words[i].length>1){
-            result.push(words[i]);
-        }
-    }
-    
-    return result;
-}
+/**
+ * Creates a stack from a given array
+ * stack.$stackOf([7,8,9,11]]) 
+ */
+Array.prototype.$stackOf = function(pArray){}
 
 
-
-String.prototype.areYouPalindrom = function(){
-    return this == this.split("").reverse().join("") && this.length>1;
-}
-
-// the new sexy way
-function alternative2(pSentence){
-    return pSentence.replace(/\W/g, " ")
-        .toLowerCase()
-        .split(" ")
-        .filter(word => word.areYouPalindrom());
-}
-
-
-function alternative3(pSentence){
-    let sentence = pSentence.replace(/\W/g, " ").toLowerCase();
-    let words = sentence.split("");
-    let result = [];
-
-    for(let word of words){
-        if(word.areYouPalindrom()){
-            result.push(word);
-        }
-    }
-
-    return result;
-}
+/**
+ * Creates a stack from a the given parameters
+ * stack._stackOf(1,2,3,5)
+ * Please do not change the function below!!!
+ */
+Array.prototype._stackOf = function(){}
