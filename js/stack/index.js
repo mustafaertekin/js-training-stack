@@ -9,6 +9,13 @@ Array.prototype.add = function(pItem){
 };
 
 /**
+ * Gives the size of the stack
+ */
+Array.prototype.size = function(pItem){
+    return this.length;
+};
+
+/**
  * Remove the first item/tos(top of the stack) from the stack
  */
 Array.prototype.remove = function(){
@@ -48,7 +55,7 @@ Array.prototype.isEmpty = function(){
  * @example stackInstance.$stackOf([7,8,9,11]]) 
  */
 Array.prototype.$stackOf = function(pArray){
-    this.length = 0;
+    this.reset();
     for (var i=0; i < pArray.length; i++) {
         this.push(pArray[i]);
     }
@@ -61,16 +68,14 @@ Array.prototype.$stackOf = function(pArray){
  * Creates a stack from a the given parameters
  */
 Array.prototype._$stackOf = function(){
-    var args = [].slice.apply(arguments);
-    for (var i=0; i < args.length; i++) {
-        this.push(arguments[i]);
+//    var args = [].slice.apply(arguments);
+    for (let value of arguments){
+        this.push(value);
     }
-    return this;
+//    for (var i=0; i < args.length; i++) {
+//        this.push(arguments[i]);
+//    }
+//    return this;
 }
 
-/**
- * Gives the size of the stack
- */
-Array.prototype.size = function(pItem){
-    return this.length;
-};
+
