@@ -1,42 +1,43 @@
 
 
 /**
- * Add new item into the stack
+ * Add a new item into the stack
  * @param  pItem, item to be added
  */
 Array.prototype.add = function(pItem){};
 
 /**
- * Remove the top of the stack from the stack
+ * Remove the first item/tos(top of the stack) from the stack
  */
 Array.prototype.remove = function(){}
 
 /**
- * Shos the item inthe top of the stack
+ * Displays the first item/tos(top of stack) from the stack
  */
 Array.prototype.peek = function(){}
 
 /**
- * Delelte all items from the stack
+ * Delete all items from the stack
  */
 Array.prototype.reset = function(){}
 
 /**
- * Ask for the emptyness
+ * Ask whether the stack is empty
  */
 Array.prototype.isEmpty = function(){}
 
 
 /**
  * Creates a stack from a given array
- * stack.$stackOf([7,8,9,11]]) 
+ * @param pArray, the array which contains the elements to be added
+ * @example stackInstance.$stackOf([7,8,9,11]]) 
  */
 Array.prototype.$stackOf = function(pArray){}
 
 
 /**
  * Creates a stack from a the given parameters
- * stack._stackOf(1,2,3,5)
- * Please do not change the function below!!!
+ * @example stack._stackOf(1,2,3,5)
+ * @warning Please do not change the function below!!!
  */
 Array.prototype._stackOf = function(){}
