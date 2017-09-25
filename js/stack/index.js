@@ -59,7 +59,6 @@ Array.prototype.$stackOf = function(pArray){
     for (var i=0; i < pArray.length; i++) {
         this.push(pArray[i]);
     }
-    
     return this;
 }
 
@@ -68,14 +67,17 @@ Array.prototype.$stackOf = function(pArray){
  * Creates a stack from a the given parameters
  */
 Array.prototype._$stackOf = function(){
-//    var args = [].slice.apply(arguments);
-    for (let value of arguments){
+// ---------alternative 1-----------------------
+    /*for (let value of arguments){
         this.push(value);
-    }
+    }*/
+// ---------alternative 2-----------------------
+//    var args = [].slice.apply(arguments);
 //    for (var i=0; i < args.length; i++) {
 //        this.push(arguments[i]);
 //    }
-//    return this;
+// ----------alternative 3----------------------
+    Array.prototype.push.apply(this,arguments);
 }
 
 
